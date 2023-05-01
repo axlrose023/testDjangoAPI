@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>Index Page
+{% if user.is_authenticated %}<h5>{{ user }}</h5>{% endif %}
+{% for menu in menus %}
+    {{ menu.items }} - {{ menu.restaurant }}
+    <p><a href="{% url 'vote' id=menu.id %}">Vote</a></p>
+    <br><br>
+{% endfor %}
+<br><br><br>
+</body>
+</html>

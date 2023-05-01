@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+    end
+{% endblock %}
+{% block content %}
+    {% for vote in votes %}
+
+        <p>{{ vote.menu }} - {{ vote.employee }}</p>
+    {% endfor %}
+
+{% endblock %}
